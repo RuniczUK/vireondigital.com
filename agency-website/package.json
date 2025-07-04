@@ -1,0 +1,21 @@
+{
+  "name": "agency-website",
+  "version": "1.0.0",
+  "description": "A website for an agency that includes links to Calendly and features for selling services.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined yet.'"
+  },
+  "keywords": [
+    "agency",
+    "website",
+    "services",
+    "Calendly"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
