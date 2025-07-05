@@ -1,119 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Vireon Digital</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vireon Digital — Scale Your Brand</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts: Poppins for headlines, Inter for body -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom styles for fonts and hover effects, overriding Bootstrap defaults where necessary */
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #000000; /* Pure black text */
+            background-color: #FFFFFF; /* Pure white background */
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700; /* Bold for headlines */
+        }
+        /* Primary button style */
+        .btn-primary-custom {
+            background-color: #000000; /* Solid black button */
+            color: #FFFFFF; /* White text */
+            border-color: #000000; /* Black border */
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-primary-custom:hover {
+            background-color: #333333; /* Slightly lighter black on hover */
+            color: #FFFFFF;
+            border-color: #333333;
+        }
+        /* Secondary button style (if needed, currently not used as per brief) */
+        .btn-secondary-custom {
+            background-color: #FFFFFF; /* White button */
+            color: #000000; /* Black text */
+            border: 1px solid #000000; /* Black border */
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .btn-secondary-custom:hover {
+            background-color: #000000; /* Invert colors on hover */
+            color: #FFFFFF;
+        }
+        /* Link hover underline effect */
+        .link-hover-underline:hover {
+            text-decoration: underline;
+        }
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Ensure sections take full viewport height for Hero */
+        .min-vh-100 {
+            min-height: 100vh;
+        }
+    </style>
 </head>
-<body>
-  <!-- ================================================================= -->
-  <!-- BODY CONTENT STARTS HERE                                        -->
-  <!-- ================================================================= -->
+<body class="bg-white">
 
-  <!-- Hero Section -->
-<section id="hero" class="hero">
-  <div class="hero-container">
-    <div class="hero-text">
-      <h1 class="hero-headline">Scale Your Brand with Ads that Pop</h1>
-      <p class="hero-subheadline">
-        Struggling To Get Leads? We get it. At Vireon Digital, we strive to maximise lead generation to shoot your conversion rates sky high. No more waiting days to get clients or spending hours on outreach with no results.
-      </p>
-      <a href="#cta" class="btn btn-primary">Book Your Free Strategy Call</a>
-      <a href="#services" class="hero-secondary-link">See how it works ↓</a>
-    </div>
-    <div class="hero-image">
-      <img src="founder-portrait-bw.png" alt="Founder portrait" width="800" height="800">
-    </div>
-  </div>
-</section>
-  <!-- Problem & Solution Section -->
-<section id="problem-solution" class="problem-solution">
-  <div class="problem-container">
-    <div class="problem-image">
-      <img src="problem-section-bw-photo.png" alt="Frustrated marketer looking at analytics" width="1200" height="800">
-    </div>
-    <div class="problem-text">
-      <h2 class="problem-headline">Most brands waste time and effort on ads that don’t convert.</h2>
-      <p class="problem-description">
-        You’ve probably spent hours and wasted precious energy on making new creatives and writing copy that doesn’t convert. Vireon Digital fixes that. We blend powerful, high-converting copy with smart, targeted ads so your brand scales faster than you’ve ever seen.
-      </p>
-      <a href="#services" class="btn btn-primary">Let’s Fix Your Ads</a>
-    </div>
-  </div>
-</section>
+    <!-- Header / Logo -->
+    <header class="py-4 px-3 px-md-4 px-lg-5 bg-white">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <a href="#" class="fs-4 fw-bold text-dark">Vireon Digital</a>
+        </div>
+    </header>
 
-  <!-- Services Section -->
-<section id="services" class="services">
-  <div class="services-container">
-    <h2 class="services-headline">How We Grow Brands</h2>
-    <div class="service-items">
-      <div class="service-item">
-        <img src="icon-paid-ads.png" alt="Ad Management Icon" width="300" height="300">
-        <h3 class="service-title">Ad Management</h3>
-        <p class="service-description">
-          We launch, manage, and scale ad campaigns on all platforms. We make sure ad copy is perfectly optimised for maximum lead generation and securing the results you deserve!
-        </p>
-      </div>
-      <div class="service-item">
-        <img src="icon-creatives.png" alt="Eye-Catching Creatives Icon" width="300" height="300">
-        <h3 class="service-title">Eye-Catching Creatives</h3>
-        <p class="service-description">
-          Our team carefully crafts the creatives we use to stop clients from scrolling, then makes sure they get transported straight into your website.
-        </p>
-      </div>
-      <div class="service-item">
-        <img src="icon-strategy.png" alt="Custom Strategy Icon" width="300" height="300">
-        <h3 class="service-title">Custom Strategy</h3>
-        <p class="service-description">
-          We don’t offer a “one size fits all” approach to marketing. Instead, we create a custom game plan tailored to your company's needs.
-        </p>
-      </div>
-    </div>
-    <a href="#cta" class="btn btn-primary">Get Your Free Strategy Plan</a>
-  </div>
-</section>
+    <!-- Hero Section -->
+    <section id="hero" class="min-vh-100 d-flex align-items-center justify-content-center py-5 px-3 px-md-4 px-lg-5 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <h1 class="display-1 mb-4 fw-bold">
+                        Scale Your Brand with Ads that Pop
+                    </h1>
+                    <p class="fs-4 mb-5 text-muted">
+                        Struggling To Get Leads? We get it. At Vireon Digital, we strive to maximise lead generation to shoot your conversion rates sky high. No more waiting days to get clients or spending hours on outreach with no results.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 gap-sm-4">
+                        <a href="#cta" class="btn btn-primary-custom btn-lg rounded-pill shadow">
+                            Book Your Free Strategy Call
+                        </a>
+                        <a href="#how-it-works" class="text-dark fs-5 fw-medium link-hover-underline d-flex align-items-center">
+                            See how it works <span class="ms-2">↓</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Why Vireon Section -->
-<section id="why-vireon" class="why-vireon">
-  <div class="why-vireon-container">
-    <h2 class="why-vireon-headline">Fresh Perspective. Fast Results.</h2>
-    <ul class="why-vireon-list">
-      <li class="why-vireon-item"><strong>Current Methods —</strong> We focus on what actually works today.</li>
-      <li class="why-vireon-item"><strong>Direct Access —</strong> Work with a real strategist, not just account managers.</li>
-      <li class="why-vireon-item"><strong>Conversion Is Key —</strong> Every word on every ad is designed to sell.</li>
-    </ul>
-    <a href="#cta" class="btn btn-primary">Book Your Call Now</a>
-  </div>
-</section>
+    <!-- Problem & Solution Section -->
+    <section id="how-it-works" class="bg-light py-5 px-3 px-md-4 px-lg-5 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-7">
+                    <h3 class="fs-5 text-uppercase text-muted mb-3 fw-semibold">
+                        Most brands waste time and effort on ads that don’t convert.
+                    </h3>
+                    <h2 class="display-4 mb-4 fw-bold">
+                        You’ve probably spent hours and wasted precious energy on making new creatives and writing copy that doesn’t convert.
+                    </h2>
+                    <p class="fs-4 mb-5 text-muted">
+                        Vireon Digital fixes that. We blend powerful, high-converting copy with smart, targeted ads so your brand scales faster than you’ve ever seen.
+                    </p>
+                    <a href="#cta" class="btn btn-primary-custom btn-lg rounded-pill shadow">
+                        Let’s Fix Your Ads
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Call to Action Section -->
-<section id="cta" class="cta">
-  <div class="cta-container">
-    <h2 class="cta-headline">Ready to grow faster?</h2>
-    <p class="cta-text">
-      No more waiting your turn in line for success, book a call with me to start growing your brand today.
-    </p>
-    <a href="#hero" class="btn btn-primary">Book Your Free Strategy Call</a>
-  </div>
-</section>
+    <!-- Services Section ("What We Do") -->
+    <section class="bg-white py-5 px-3 px-md-4 px-lg-5">
+        <div class="container">
+            <h2 class="display-4 text-center mb-5 fw-bold">
+                How We Grow Brands
+            </h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4 g-lg-5">
+                <!-- Service 1: Ad Management -->
+                <div class="col">
+                    <div class="text-center p-4 border border-light rounded shadow-sm h-100">
+                        <div class="fs-1 mb-3 text-dark">🚀</div> <!-- Emoji icon -->
+                        <h3 class="fs-3 fw-bold mb-2">Ad Management</h3>
+                        <p class="text-muted">
+                            We launch, manage, and scale ad campaigns on all platforms. We make sure ad copy is perfectly optimised for maximum lead generation and securing the results you deserve!
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 2: Eye-Catching Creatives -->
+                <div class="col">
+                    <div class="text-center p-4 border border-light rounded shadow-sm h-100">
+                        <div class="fs-1 mb-3 text-dark">✍️</div> <!-- Emoji icon -->
+                        <h3 class="fs-3 fw-bold mb-2">Eye-Catching Creatives</h3>
+                        <p class="text-muted">
+                            Our team carefully crafts the creatives we use to stops clients from scrolling, then makes sure they get transported straight into your website.
+                        </p>
+                    </div>
+                </div>
+                <!-- Service 3: Custom Strategy -->
+                <div class="col">
+                    <div class="text-center p-4 border border-light rounded shadow-sm h-100">
+                        <div class="fs-1 mb-3 text-dark">💡</div> <!-- Emoji icon -->
+                        <h3 class="fs-3 fw-bold mb-2">Custom Strategy</h3>
+                        <p class="text-muted">
+                            We don’t offer a “one size fits all” approach to marketing. Instead, we create a custom game plan tailored to your company's needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="#cta" class="btn btn-primary-custom btn-lg rounded-pill shadow">
+                    Get Your Free Strategy Plan
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-<footer id="footer" class="footer">
-  <div class="footer-container">
-    <p class="footer-email">
-      Email: <a href="mailto:info@vireondigital.com">info@vireondigital.com</a>
-    </p>
-    <p class="footer-copy">
-      © 2025 Vireon Digital. All rights reserved.
-    </p>
-    <a href="#cta" class="footer-link">→ Book a Call</a>
-  </div>
-</footer>
+    <!-- Why Vireon Digital? -->
+    <section class="bg-light py-5 px-3 px-md-4 px-lg-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-7 text-center">
+                    <h2 class="display-4 mb-4 fw-bold">
+                        Fresh Perspective. Fast Results.
+                    </h2>
+                    <ul class="list-unstyled fs-4 mb-4 text-muted">
+                        <li class="d-flex align-items-center mb-3 text-start">
+                            <span class="text-dark fs-4 me-2">✅</span> Current Methods — We focus on what actually works today.
+                        </li>
+                        <li class="d-flex align-items-center mb-3 text-start">
+                            <span class="text-dark fs-4 me-2">✅</span> Direct Access — Work with a real strategist, not just account managers.
+                        </li>
+                        <li class="d-flex align-items-center mb-3 text-start">
+                            <span class="text-dark fs-4 me-2">✅</span> Conversion Is Key — Every word on every ad is designed to sell.
+                        </li>
+                    </ul>
+                    <a href="#cta" class="btn btn-primary-custom btn-lg rounded-pill shadow">
+                        Book Your Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Call to Action Section -->
+    <section id="cta" class="bg-white py-5 px-3 px-md-4 px-lg-5 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-7">
+                    <h2 class="display-4 mb-4 fw-bold">
+                        Ready to grow faster?
+                    </h2>
+                    <p class="fs-4 mb-5 text-muted">
+                        No more waiting your turn in line for success, book a call with me to start growing your brand today.
+                    </p>
+                    <!-- Calendly inline widget begin -->
+                    <div class="calendly-inline-widget mx-auto" data-url="https://calendly.com/eduard-ghita-egbusiness" style="min-width:320px;height:700px;"></div>
+                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                    <!-- Calendly inline widget end -->
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- ================================================================= -->
-  <!-- BODY CONTENT ENDS HERE                                          -->
-  <!-- ================================================================= -->
+    <!-- Our Commitment Section -->
+    <section class="bg-light py-5 px-3 px-md-4 px-lg-5 text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9 col-xl-7">
+                    <h2 class="display-4 mb-4 fw-bold">
+                        Our Commitment to Your Success
+                    </h2>
+                    <p class="fs-4 mb-5 text-muted">
+                        At Vireon Digital, your growth is our priority. We are dedicated to delivering results that not only meet but exceed your expectations, ensuring a clear return on your investment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 px-3 px-md-4 px-lg-5 text-center">
+        <div class="container">
+            <p class="mb-2 fs-5">Email: <a href="mailto:info@vireondigital.com" class="text-white link-hover-underline">info@vireondigital.com</a></p>
+            <p class="mb-2 small text-muted">© 2025 Vireon Digital. All rights reserved.</p>
+            <a href="#cta" class="text-white fs-5 fw-medium link-hover-underline d-flex align-items-center justify-content-center">
+                → Book a Call
+            </a>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (optional, for interactive components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
